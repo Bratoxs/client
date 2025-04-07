@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./Consulta.module.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function App() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
@@ -14,7 +16,7 @@ export default function App() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/consultar", {
+      const response = await fetch(`${API_URL}/consultar`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
