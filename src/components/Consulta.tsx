@@ -16,7 +16,7 @@ export default function App() {
     setError("");
 
     try {
-      const response = await fetch(`${API_URL}/api/consultar`, {
+      const response = await fetch(`${API_URL}/consultar`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
